@@ -3,12 +3,10 @@ import Link from "next/link";
 import { useState } from "react";
 import Breadcrumb from "../../components/breadcrumb";
 import CustomInput from "../../components/ui/custom-input";
-import useAuth from "../../hooks/useAuth";
 
 
 const SignUp = () => {
 
-  const { state, error, changeHandler, handleRegistration } = useAuth()
 
   // const [state, setState] = useState({
   //   firstName: '',
@@ -31,51 +29,50 @@ const SignUp = () => {
       <div className="container">
         <form className="signup-box mx-auto">
           <h5 className="">Sign Up</h5>
-          <hr/>
-          {error && <h3 className="ps-5 text-danger">{error}</h3>}
+          <hr />
 
           <CustomInput
             type={'input'}
             label={'First Name'}
             name='firstName'
-            changeHandler={changeHandler}
-            value={state.firstName}
+            changeHandler={`changeHandler`}
+            value={`state.firstName`}
           />
 
           <CustomInput
             type={'input'}
             label={'Last Name'}
             name='lastName'
-            changeHandler={changeHandler}
-            value={state.lastName}
+            changeHandler={`changeHandler`}
+            value={`state.lastName`}
           />
           <CustomInput
             type={'email'}
             label={'Email'}
             name='email'
-            changeHandler={changeHandler}
-            value={state.email}
+            changeHandler={`changeHandler`}
+            value={`state.email`}
           />
           <CustomInput
             type={'text'}
             label={'Contact Number'}
             name='contact'
-            changeHandler={changeHandler}
-            value={state.contact}
+            changeHandler={`changeHandler`}
+            value={`state.contact`}
           />
           <CustomInput
             type={'password'}
             label={'Password'}
             name='password'
-            changeHandler={changeHandler}
-            value={state.password}
+            changeHandler={`changeHandler`}
+            value={`state.password`}
           />
           <CustomInput
             type='password'
             label='Confirm Password'
             name='confirmPassword'
-            changeHandler={changeHandler}
-            value={state.confirmPassword}
+            changeHandler={`changeHandler`}
+            value={`tate.confirmPassword`}
           />
 
           <div className="text">
@@ -83,7 +80,7 @@ const SignUp = () => {
           </div>
           <Link href="#">
             <div className="pt-3">
-              <button className="sign" onClick={handleRegistration}>Sign Up</button>
+              <button className="sign">Sign Up</button>
             </div>
           </Link>
           <div className="account pt-5">
